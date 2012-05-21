@@ -1,0 +1,86 @@
+
+a{
+  color: #2281CF;
+  text-decoration: none;
+}
+ul{
+  margin-left: 20px;
+  margin-top: 15px;
+  padding: 0;
+  list-style: none;
+}
+
+div.pos_fixed
+{
+	position:fixed;
+	top:10px;
+	left:200px;
+}
+
+body{
+  width: ;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-right: 10px;
+  font-family: "Open Sans", "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif;
+  font-size: 13pt;
+  color: #444;
+  font-weight: normal;
+
+}
+
+aside{
+  width: 200px;
+  height: 1000px;
+  position: fixed;
+  top: 20px;
+}
+#content{
+  margin-left: 200px;
+  width: 560px;
+}
+
+.icon{
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 16px;
+  padding-left: 0px;
+}
+.add{
+  background-image: url(http://www.famfamfam.com/lab/icons/silk/icons/add.png);
+}
+.home{
+  background-image: url(http://www.famfamfam.com/lab/icons/silk/icons/house.png);
+}
+.processed{
+  background-image: url(http://www.famfamfam.com/lab/icons/silk/icons/accept.png);
+}
+.processing{
+  background-image: url(http://www.famfamfam.com/lab/icons/silk/icons/cog.png);
+}
+.info{
+  background-image: url(http://www.famfamfam.com/lab/icons/silk/icons/information.png);
+}
+
+#search input{
+  padding: 5px 5px 5px 20px;
+  border-radius: 5px;
+  background: url(https://www.dropbox.com/static/images/magnifier_gray.png) 2% center no-repeat;
+  box-shadow: 0 0 0 #000000, 0 3px 3px #EEEEEE inset;
+  border: 1px solid #bfbfbf;
+}
+#search input:hover{
+  border: 1px solid #a0a0a0;
+}
+
+#studies li{
+  padding: 5px 20px;
+  border-bottom: 1px solid #EDF1F5;
+}
+#studies li:hover{
+  background-color: rgba(230, 245, 255, .3);
+  border-bottom: 1px solid #C6D8E4;;
+}
+#studies .processing, #studies .processed{
+  background-position: left center;
+}

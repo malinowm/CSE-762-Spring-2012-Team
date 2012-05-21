@@ -1,0 +1,205 @@
+a:link, a:visited, a:active {
+    color: #bb4242;
+}
+a:hover {
+    color: #ff0000;
+}
+    
+
+#GSEFetchForm {
+    width: 500px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.grayBox {
+    background-color: #ececec;
+    position: relative;
+    padding: 15px;
+    font: 13px Arial, sans-serif;
+}
+.grayBox .corner {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    z-index: 100;
+}
+.grayBox .topLeft {
+    background: url("images/gray-top-left-corner.png") top left no-repeat;
+    top: 0; left: 0;
+}
+.grayBox .topRight {
+    background: url("images/gray-top-right-corner.png") top left no-repeat;
+    top: 0; right: 0;
+}
+.grayBox .bottomLeft {
+    background: url("images/gray-bottom-left-corner.png") top left no-repeat;
+    bottom: 0; left: 0;
+}
+.grayBox .bottomRight {
+    background: url("images/gray-bottom-right-corner.png") top left no-repeat;
+    bottom: 0; right: 0;
+}
+.grayBox .leftBorder {
+    width: 15px;
+    height: 100%;
+    position: absolute;
+    background: url("images/gray-left-border.png") top left repeat-y;
+    top: 0; left: 0;
+    z-index: 50;
+}
+.grayBox .rightBorder {
+    width: 15px;
+    height: 100%;
+    position: absolute;
+    background: url("images/gray-right-border.png") top left repeat-y;
+    top: 0; right: 0;
+    z-index: 50;
+}
+.grayBox .topBorder {
+    width: 100%;
+    height: 15px;
+    position: absolute;
+    background: url("images/gray-top-border.png") top left repeat-x;
+    top: 0; left: 0;
+    z-index: 50;
+}
+.grayBox .bottomBorder {
+    width: 100%;
+    height: 15px;
+    position: absolute;
+    background: url("images/gray-bottom-border.png") top left repeat-x;
+    bottom: 0; left: 0;
+    z-index: 50;
+}
+
+#GSEFetchForm #GSELabel {
+    display: block;
+    width: 57px;
+    height: 23px;
+    background: url("images/GSE-field-title.png") top left no-repeat;
+}
+.divider {
+    background: url("images/hr-2px-gray.png") top left repeat-x;
+    height: 2px;
+    margin: 16px 16px 16px 16px;
+}
+
+.grayBox h3 {
+    font: 28px arial, sans-serif;
+    color: #494949;
+    line-height: 1em;
+    margin: 0.5em;
+}
+#GSEListField {
+    width: 95%;
+    height: 300px;
+    font: 16px Arial, sans-serif;
+    line-height: 1.3em;
+}
+
+.gray-dna-hr {
+    background: url("images/dna-hr-gray.png") top center no-repeat;
+    height: 22px;
+    margin: 16px;
+}
+
+
+#ExtendedGSE {
+    margin: 12px;
+    text-align: left;
+    padding: 0 12px;
+}
+#ExtendedGSE #UploadCSV {
+    float:right;
+}
+
+
+.clear {
+    clear: both;
+    line-height: 0;
+    height: 0;
+}
+
+#FormMINELogo {
+    margin: 0 0 12px 0;
+}
+#SubmitRegion {
+    position: relative;
+}
+#Truck {
+    position: absolute;
+    display: none;
+    top: 20px;
+    background: url("images/dump-truck.png") top center no-repeat;
+    width: 50px;
+    height: 28px;
+    z-index: 50;
+}
+#SubmitRegion img {
+    margin: 12px 0 0 0;
+}
+#FetchButtonContainer {
+    position: absolute;
+    width: 100%;
+    height: 53px;
+    display: none;
+    z-index: 100;
+}
+#FetchButtonGlow {
+    background: url("images/fetch-button-super-shiney.png") top center no-repeat;
+    height: 53px;
+    width: 181px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+#Head{
+    background: url("images/head-bg.png") top center repeat-x;
+    height: 128px;
+    position: relative;
+    margin: 0 0 18px 0;
+    }
+#HeadTopLeft {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("images/head-decoration.png") top center no-repeat;
+    width: 399px;
+    height: 19px 
+    }
+#Logo {
+    position: absolute;
+    top: 19px;
+    left: 0;
+    background: url("images/mine-head-logo.png") top center no-repeat;
+    width: 399px;
+    height: 96px;
+    display: block;
+    }
+#Foot {
+    border-top: 1px solid #5c0401;
+    text-align: center;
+    font: 12px Arial, sans-serif;
+    color: #999;
+    padding: 4px;
+    margin-top: 36px;
+    }
+
+#ContentArea{
+    margin: 0 auto;
+    border: none;
+    vertical-align: top;
+    }
+#Abstract {
+    text-align: left;
+    font: 14px Georgia, serif;
+    color: #b22201;
+    line-height: 1.4em;
+    width: 300px;
+    padding-left: 36px;
+    }
+#Abstract img {
+    display: block;
+    margin: 2em auto;
+    }
