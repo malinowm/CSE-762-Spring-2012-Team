@@ -1,0 +1,19 @@
+.point {
+  fill: #18C3F9;
+  stroke-width: 2px;
+  stroke: #2850E5;
+}
+.point.hover{
+  stroke: pink;
+}
+
+.detail{
+  fill: #ccc; 
+  stroke: #ccc;
+}
+
+.pairwise_point{
+  fill: red;
+  stroke: blue;
+  stroke-width: 1px;
+}

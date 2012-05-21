@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>MINE: Medical Informatics Network Extractor</title>
+<link rel="stylesheet" href="style.css" type="text/css" media="all" />
+<script src="jquery-1.7.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+	      
+    $("#FetchButton").mouseenter(function(event){
+    if($("#GSEListField").val() == "dumptruck"){
+      $("#FetchButtonContainer").fadeIn('slow');
+      $("#Truck").css({left:30});
+      $("#Truck").show();
+      $("#Truck").animate({left:'400'}, 600)}
+    });
+    $("#FetchButtonGlow").mouseleave(function(event){
+      $("#FetchButtonContainer").fadeOut('slow');
+      $("#Truck").hide();
+     });
+    $("#FetchButtonGlow").click(function(event){
+      $("#FetchButton").trigger("click");
+    });
+  
+  });
+</script>
+</head>
+
+<body>
+
+<div id="Head">
+  <div id="HeadTopLeft"></div>
+  <a href="" id="Logo"></a>
+</div>
+
+<table id="ContentArea">
+  <tr>
+  
+<td id="GSEFetchForm">
+  <img src="images/mine-logo-small.png" alt="MINE logo" class="logo" width="317" height="54" id="FormMINELogo" />
+  <div class="grayBox">
+    <div class="corner topLeft"></div><div class="corner topRight"></div><div class="corner bottomLeft"></div><div class="corner bottomRight"></div><div class="leftBorder"></div><div class="rightBorder"></div><div class="bottomBorder"></div><div class="topBorder"></div>
+
+    <div class="boxContent">
+      <form action="http://google.com" method="POST">
+	<h3>Enter GSE IDs</h3>
+	<div class="gray-dna-hr"></div>
+	<textarea id="GSEListField" name="GSEList"></textarea>
+
+	<div id="ExtendedGSE">
+	  <a href="" id="CustomSettingsLink">Custom Settings</a>
+	  <input type="image" name="UploadCSV" id="UploadCSV" src="images/upload-csv-button.png" />
+	  <div class="clear"></div>
+	</div>
+
+	<div class="divider"></div>
+
+	<div id="SubmitRegion">
+	  <div id="Truck"></div>
+	  <div id="FetchButtonContainer"><div id="FetchButtonGlow"></div></div>
+	  <input type="image" name="fetch" src="images/fetch-button.png" id="FetchButton" /><br />
+	  <img src="images/osu-small-black-logo.png" alt="Ohio State University" />
+	</div>
+
+      </form/>
+    </div>
+  </div>
+</td>
+
+    <td id="Abstract">
+      <p>Ambitious  GEO (Genetic Expression Omnibus) data-mining studies can be too tedious and labor intensive to perform efficiently over many datasets because each set of thousands must be manually downloaded, cleaned, filtered, and reviewed in many bioinformatic laboratories. Further, this preliminary data curating work may be needlessly duplicated during future studies or by colleagues.</p>
+
+<p>To mitigate this problem, MINE automates the most tedious aspects of GEO studies: to fetch, format, clean, filter, document, display, save, and share genetic datasets.</p>
+
+<p>MINE was developed by Andrew Yates working under Professors Kun Huang and Raghu Machiraju at the Ohio State University.</p>
+
+      <img src="images/mine-truck.png" />
+      </td>
+
+
+</tr></table>
+
+<div id="Foot">
+  MINE: Medical Informatics Network Excavator. Ohio State University, 2012.
+</div>
+
+</body>
+
+</html>
+

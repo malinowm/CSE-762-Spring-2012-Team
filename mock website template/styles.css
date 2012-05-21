@@ -1,0 +1,26 @@
+.grayBox {
+    background-color: #ececec;
+    position: absolute;
+    width: 100%;
+}
+.gray-box .corner {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+}
+.gray-box .top-left {
+    background: url(images/gray-top-left-corner.png) top left no-repeat;
+    position: top left;
+}
+.gray-box .top-right {
+    background: url(images/gray-top-right-corner.png) top left no-repeat;
+    position: top right;
+}
+.gray-box .bottom-left {
+    background: url(images/gray-bottom-left-corner.png) top left no-repeat;
+    position: bottom left;
+}
+.gray-box .bottom-right {
+    background: url(images/gray-bottom-right-corner.png) top left no-repeat;
+    position: bottom right;
+}

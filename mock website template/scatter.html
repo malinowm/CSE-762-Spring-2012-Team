@@ -1,0 +1,114 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="scatter.js"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var M = 7919 * 6607;
+        var rnds = [];
+        x0 = Math.floor(M / 2);
+        for (var i = 0; i < 30300; ++i) {
+	  rnds[i] = x0/M  - 0.5;
+          x0 = (x0 * x0) % M;
+        }
+      
+        var data = new google.visualization.DataTable();
+        data.addColumn('number', 'A');
+        data.addColumn('number', 'Male');
+	data.addColumn('number', 'Female');
+
+        for (var i = 0; i < 100; ++i) {
+          var x = 0;
+          var y1 = 0;
+          var y2 = 0;
+          for (var j = 0; j < 100; ++j) {
+            var a1 = rnds[100 * i + j*3 + 1];
+            var a2 = -0.1 + a1 * 2 + rnds[100 * i + j*3 + 2];
+            var a3 = 0.1 - a1 * 1.5 + rnds[100 * i + j*3 + 3];
+            x = x + a1; y1 = y1 + a2; y2 = y2 + a3;
+          }
+          data.addRow([Math.floor(x*100)/100, Math.floor(y1*100)/100, Math.floor(y2*100)/100]);
+        }
+
+        var options = {
+          chartArea: { top: '10%' },
+          pointSize: 2,
+	  title: 'eQTL Gene Expression of ABC1 versus ZYX2',
+          hAxis: {title: 'ABC1'},
+          vAxis: {title: 'ZYX2'},
+        };
+
+        var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('number', 'A');
+        data.addColumn('number', 'Male');
+	data.addColumn('number', 'Female');
+
+        for (var i = 0; i < 100; ++i) {
+          var x = 0;
+          var y1 = 0;
+          var y2 = 0;
+          for (var j = 0; j < 100; ++j) {
+            var a1 = rnds[100 * i + j*3 + 1];
+            var a2 = -0.2 + a1 * 2 + 8*rnds[100 * i + j*3 + 2];
+            var a3 = 0.1 - a1 * 1.5 + rnds[100 * i + j*3 + 3];
+            x = x + a1; y1 = y1 + a2; y2 = y2 + a3;
+          }
+          data.addRow([Math.floor(x*100)/100, Math.floor(y1*100)/100, Math.floor(y2*100)/100]);
+        }
+
+        var options = {
+          chartArea: { top: '10%' },
+          pointSize: 2,
+	  title: 'ABC1 versus HHHH',
+          hAxis: {title: 'ABC1'},
+          vAxis: {title: 'HHHH'},
+        };
+
+        var chart = new google.visualization.ScatterChart(document.getElementById('chart_div2'));
+        chart.draw(data, options);
+
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('number', 'A');
+        data.addColumn('number', 'Male');
+	data.addColumn('number', 'Female');
+
+        for (var i = 0; i < 100; ++i) {
+          var x = 0;
+          var y1 = 0;
+          var y2 = 0;
+          for (var j = 0; j < 100; ++j) {
+            var a1 = rnds[100 * i + j*3 + 1];
+            var a2 = -0.2 + a1 * 2 + 8*rnds[100 * i + j*3 + 2];
+            var a3 = -0.1 - a1 * 1.5 + 8*rnds[100 * i + j*3 + 3];
+            x = x + a1; y1 = y1 + a2; y2 = y2 + a3;
+          }
+          data.addRow([Math.floor(x*100)/100, Math.floor(y1*100)/100, Math.floor(y2*100)/100]);
+        }
+
+        var options = {
+          chartArea: { top: '10%' },
+          pointSize: 2,
+	  title: 'ABC1 versus BNBN',
+          hAxis: {title: 'ABC1'},
+          vAxis: {title: 'BNBN'},
+        };
+
+        var chart = new google.visualization.ScatterChart(document.getElementById('chart_div3'));
+        chart.draw(data, options);
+
+      }
+    </script>
+  </head>
+  <body>
+    <h1 style="font: georgia; color: #666; font-weight: normal; text-align: center;">GSE12345 eQTL Expression Comparisons</h1>
+    <div id="chart_div" style="height:800px"></div>
+    <hr />
+    <div id="chart_div2" style="height:200px; width: 300px; float:left;"></div>    <div id="chart_div3" style="height:200px; width: 300px; float:left;"></div><div style="clear:both;"></div>
+  </body>
+</html>
